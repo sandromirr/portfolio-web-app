@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import CareerGeminiChat from './components/CareerGeminiChat.jsx';
 import ExperienceList from './components/Experience.jsx';
 import SkillCard from './components/SkillCard.jsx';
@@ -6,6 +7,21 @@ import ProjectListCard from './components/ProjectListCard.jsx';
 import AboutCard from './components/AboutCard.jsx';
 
 export default function App() {
+	const [theme, setTheme] = useState(() => {
+		if (typeof window === 'undefined') return 'dark';
+		return window.localStorage.getItem('theme') === 'light' ? 'light' : 'dark';
+	});
+
+	useEffect(() => {
+		const root = document.documentElement;
+		root.setAttribute('data-theme', theme);
+		window.localStorage.setItem('theme', theme);
+	}, [theme]);
+
+	const toggleTheme = () => {
+		setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+	};
+
 	const highlights = ['React & Next.js', 'Node.js & Express', 'AI + UX Storytelling', 'Cloud Run & GCP'];
 	const experience = [
 		{
@@ -32,6 +48,14 @@ export default function App() {
 
 	return (
 		<div className="app">
+			<button
+				type="button"
+				className="theme-toggle"
+				onClick={toggleTheme}
+				aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+			>
+				{theme === 'light' ? '🌙' : '☀️ '}
+			</button>
 			<div className="split-layout">	
 				<aside className="panel chat-panel">
 					<CareerGeminiChat />
