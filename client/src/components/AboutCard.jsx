@@ -6,12 +6,13 @@ export default function AboutCard({ highlights }) {
 			<div className="section-header">
 				<h2>About me</h2>
 				<div className="section-header-right">
-					<span>2 · Stack</span>
+					<span>2 · Profile</span>
 				</div>
 			</div>
 			<p>
-				Maker at heart. I craft human-centered experiences leveraging React, Node.js, and thoughtful motion. Recently
-				focused on weaving Gemini assistants into real client flows.
+				Senior Software Engineer based in Tbilisi, Georgia, focused on backend-heavy systems, clean architecture, and
+				scalable web applications. I enjoy working with .NET, search technologies, and helping engineers grow through
+				mentoring and teaching.
 			</p>
 			<div className="chips">
 				{highlights.map((item) => (

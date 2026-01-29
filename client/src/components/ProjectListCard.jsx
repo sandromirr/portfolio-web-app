@@ -5,38 +5,38 @@ export default function ProjectListCard() {
 		<section className="resume-section">
 			<div className="section-header">
 				<h2>Projects</h2>
-				<span>4 · Selected builds</span>
+				<span>4 · Selected work</span>
 			</div>
 			<div className="projects-grid">
 				<article className="card">
 					<div className="card-header">
 						<span className="badge">Live</span>
-						<span>2026</span>
+						<span>2019</span>
 					</div>
-					<h3>Portfolio + Gemini Assistant</h3>
+					<h3>Student Portfolio Management System</h3>
 					<p className="muted">
-						AI-enhanced portfolio embedded directly inside a DEV post using Google Cloud Run embeds.
+						Web application for managing and showcasing student portfolios used in an educational setting.
 					</p>
 					<ul>
-						<li>Gemini API + Express backend</li>
-						<li>Custom prompt grounded in JSON profile</li>
-						<li>Responsive React/Vite front-end</li>
+						<li>C#, ASP.NET MVC, and Microsoft SQL Server backend</li>
+						<li>Designed and implemented core backend functionality</li>
+						<li>Delivered a production-ready system within a short timeframe</li>
 					</ul>
 				</article>
 
 				<article className="card">
 					<div className="card-header">
 						<span className="badge neutral">Concept</span>
-						<span>2025</span>
+						<span>Teaching</span>
 					</div>
-					<h3>Commerce Ops Dashboard</h3>
+					<h3>Programming Courses & Syllabus</h3>
 					<p className="muted">
-						Operational dashboard featuring live sales metrics, AI-generated insights, and workflow automations.
+						Designing and teaching programming courses for new developers at GITA and Mziuri Computer School.
 					</p>
 					<ul>
-						<li>Role-based React app</li>
-						<li>Node.js & MongoDB API</li>
-						<li>Gemini quick insight cards</li>
+						<li>Created Python course syllabus from scratch</li>
+						<li>Taught Python, C++, algorithms, and data structures</li>
+						<li>Mentored students on best practices and problem-solving</li>
 					</ul>
 				</article>
 			</div>

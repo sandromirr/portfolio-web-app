@@ -15,7 +15,7 @@
 	--border: rgba(255, 255, 255, 0.08);
 }
 
-:root[data-theme='light'] {
+[data-theme='light'] {
 	--bg: #e5e7eb;
 	--text: #020617;
 	--panel: #ffffff;
@@ -82,7 +82,7 @@ body {
 	transform: translateY(-8px);
 }
 
-:root[data-theme='light'] .theme-toggle {
+[data-theme='light'] .theme-toggle {
 	background: #ffffff;
 	border-color: rgba(148, 163, 184, 0.5);
 	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.16);
@@ -130,7 +130,7 @@ body {
 	min-width: 0;
 }
 
-:root[data-theme='light'] .resume-panel {
+[data-theme='light'] .resume-panel {
 	background: linear-gradient(145deg, #ffffff, #e5e7eb);
 }
 
@@ -222,7 +222,7 @@ body {
 	gap: 0.8rem;
 }
 
-:root[data-theme='light'] .resume-section {
+[data-theme='light'] .resume-section {
 	background: #ffffff;
 	border-color: rgba(148, 163, 184, 0.25);
 }
@@ -255,11 +255,21 @@ body {
 	color: var(--muted);
 }
 
+[data-theme='light'] .chip {
+	border-color: rgba(148, 163, 184, 0.6);
+	background: #f3f4f6;
+	color: #4b5563;
+}
+
 .timeline article {
 	border-left: 2px solid rgba(255, 255, 255, 0.12);
 	padding-left: 1rem;
 	margin-left: 0.25rem;
 	margin-bottom: 0.9rem;
+}
+
+[data-theme='light'] .timeline article {
+	border-left-color: rgba(148, 163, 184, 0.6);
 }
 
 .timeline header {
@@ -288,7 +298,7 @@ body {
   	width: 100%;
 }
 
-:root[data-theme='light'] .card {
+[data-theme='light'] .card {
 	background: #ffffff;
 	border-color: rgba(148, 163, 184, 0.3);
 }
@@ -351,7 +361,12 @@ body {
 	gap: 0.45rem;
 }
 
-:root[data-theme='light'] .gemini-chat {
+[data-theme='light'] .gemini-chat {
+	background: #f9fafb;
+	border-color: rgba(148, 163, 184, 0.5);
+}
+
+[data-theme='light'] .gemini-form input{
 	background: #f9fafb;
 	border-color: rgba(148, 163, 184, 0.5);
 }
@@ -381,7 +396,7 @@ body {
 	color: var(--muted);
 }
 
-:root[data-theme='light'] .msg-model {
+[data-theme='light'] .msg-model {
 	background: #e5e7eb;
 	color: var(--text);
 }
@@ -409,7 +424,6 @@ body {
 	gap: 0.5rem;
 	position: sticky;
 	bottom: 0;
-	background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.06));
 	padding-top: 0.6rem;
 	padding-bottom: 0.25rem;
 	z-index: 3;

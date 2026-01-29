@@ -14,7 +14,10 @@ export default function App() {
 
 	useEffect(() => {
 		const root = document.documentElement;
-		root.setAttribute('data-theme', theme);
+		root.dataset.theme = theme;
+		if (document.body) {
+			document.body.dataset.theme = theme;
+		}
 		window.localStorage.setItem('theme', theme);
 	}, [theme]);
 
@@ -22,28 +25,48 @@ export default function App() {
 		setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
 	};
 
-	const highlights = ['React & Next.js', 'Node.js & Express', 'AI + UX Storytelling', 'Cloud Run & GCP'];
+	const highlights = ['.NET & C#', 'Distributed systems', 'Search & messaging', 'Teaching & mentoring'];
 	const experience = [
 		{
-			company: 'Tech Company',
-			role: 'Full-Stack Developer',
-			years: '2022 — Present',
-			summary: 'Leading modern web builds and integrating AI-assisted features.',
+			company: 'HR.GE',
+			role: 'Senior Software Engineer',
+			years: '2023 — Present',
+			summary: 'Designing and maintaining scalable backend services with .NET, Elasticsearch, Kafka, and RabbitMQ.',
 		},
 		{
-			company: 'Startup Inc.',
-			role: 'Product Engineer',
-			years: '2020 — 2022',
-			summary: 'Rapid prototyping and shipping MVPs in cross-functional pods.',
+			company: 'HR.GE',
+			role: 'Software Engineer',
+			years: '2021 — 2022',
+			summary: 'Built and improved internal web applications with ASP.NET MVC and SQL Server.',
+		},
+		{
+			company: 'GITA',
+			role: 'Course Instructor',
+			years: '2024 — Present',
+			summary: 'Teaching programming fundamentals, algorithms, and data structures to new developers.',
+		},
+		{
+			company: 'Mziuri Computer School',
+			role: 'Course Instructor',
+			years: '2019 — Present',
+			summary: 'Created Python syllabus and taught Python, C++, and core programming concepts.',
+		},
+		{
+			company: 'GeoLab',
+			role: 'Software Developer',
+			years: '2018 — 2019',
+			summary: 'Developed educational web applications, including a student portfolio system.',
 		},
 	];
 	const skills = [
-		'JavaScript & TypeScript',
-		'React, Next.js & Vite',
-		'Node.js, Express & REST APIs',
-		'PostgreSQL & MongoDB',
-		'Cloud Run, Cloud Build & GCP',
-		'Gemini API & AI UX',
+		'C# & .NET',
+		'ASP.NET MVC',
+		'Microsoft SQL Server',
+		'Elasticsearch, Kafka & RabbitMQ',
+		'MongoDB & relational databases',
+		'JavaScript, HTML & CSS',
+		'Python & Flask',
+		'Algorithms & data structures',
 	];
 
 	return (
@@ -64,11 +87,11 @@ export default function App() {
 					<header className="resume-hero">
 						<div className="resume-hero-top">
 							<div>
-							<p className="eyebrow">Sandro Mirr · Full-Stack Developer</p>
-							<h1>Human-centered engineering fused with Gemini superpowers.</h1>
+							<p className="eyebrow">Sandro Mirianashvili · Senior Software Engineer</p>
+							<h1>Backend-heavy systems with a focus on clean architecture.</h1>
 							<p className="lead">
-								I translate ambiguous product briefs into expressive experiences. Frontend craft, resilient Node.js services, and
-								AI copilots working in harmony.
+								Senior Software Engineer with 6+ years building scalable .NET services, search-heavy systems, and educational
+								platforms — with a strong passion for teaching and mentoring.
 							</p>
 							</div>
 						</div>

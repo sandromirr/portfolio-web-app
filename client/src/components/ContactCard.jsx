@@ -5,10 +5,11 @@ export default function ContactCard() {
 		<section className="resume-section contact">
 			<div className="section-header">
 				<h2>Contact</h2>
-				<span>6 · Let’s build</span>
+				<span>6 · Get in touch</span>
 			</div>
 			<p>
-				Open to contract and full-time roles focused on AI-first products, developer tooling, or expressive web platforms.
+				Open to backend-heavy roles, search and distributed systems, and teaching opportunities where I can combine
+				engineering and mentoring.
 			</p>
 			<div className="contact-details">
 				<span>sandromirr@gmail.com</span>
