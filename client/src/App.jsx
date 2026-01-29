@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import CareerGeminiChat from './components/CareerGeminiChat.jsx';
 import ExperienceList from './components/Experience.jsx';
 import SkillCard from './components/SkillCard.jsx';
@@ -30,20 +29,11 @@ export default function App() {
 		'Cloud Run, Cloud Build & GCP',
 		'Gemini API & AI UX',
 	];
-	const [theme, setTheme] = useState('dark');
-
-	useEffect(() => {
-		document.documentElement.setAttribute('data-theme', theme);
-	}, [theme]);
-
-	const toggleTheme = () => {
-		setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
-	};
 
 	return (
 		<div className="app">
-			<div className="split-layout">
-        		<aside className="panel chat-panel">
+			<div className="split-layout">	
+				<aside className="panel chat-panel">
 					<CareerGeminiChat />
 				</aside>
 				<section className="panel resume-panel">
@@ -57,15 +47,6 @@ export default function App() {
 								AI copilots working in harmony.
 							</p>
 							</div>
-							<button
-								type="button"
-								className="pill secondary theme-toggle"
-								onClick={toggleTheme}
-								aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-								title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-							>
-								{theme === 'dark' ? '🌞' : '🌙'}
-							</button>
 						</div>
 					</header>
 
@@ -77,7 +58,6 @@ export default function App() {
 						<ContactCard />
 					</div>
 				</section>
-				
 			</div>
 		</div>
 	);
