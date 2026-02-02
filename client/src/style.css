@@ -441,6 +441,16 @@ body {
 	color: #f8fafc;
 }
 
+[data-theme='light'] .gemini-form input {
+	background: #ffffff;
+	color: var(--text);
+	border-color: rgba(148, 163, 184, 0.6);
+}
+
+[data-theme='light'] .gemini-form input::placeholder {
+	color: rgba(148, 163, 184, 0.9);
+}
+
 .gemini-form button {
 	border-radius: 10px;
 	border: none;
